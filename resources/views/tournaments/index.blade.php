@@ -22,6 +22,8 @@
         @foreach($tournaments as $tournament)
             <tr>
                 <td>{{ $tournament->name }}</td>
+                <!-- <td>{{ $tournament->date }}</td> -->
+                <td>{{ date('d-m-Y', strtotime($tournament->date)) }}</td> <!-- Goede volgorde datum: https://stackoverflow.com/questions/50190058/change-date-format-in-blade-template  -->
                 <td><a href="{{ route('tournaments.edit', $tournament->id) }}">Aanpassen</a></td>
             </tr>
         @endforeach
