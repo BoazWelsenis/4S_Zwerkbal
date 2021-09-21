@@ -19,7 +19,7 @@
             <p>Aantal aankomende toernooien:</p>
             <h3>5</h3>
         </div>
-        <div class="snitch-img span-2-y yellow-border">
+        <div class="snitch-img span-2-xy yellow-border">
             <img src="img/snitch.png" alt="snitch img">
         </div>
         <div class="span-2-x yellow-border font-size-index">
