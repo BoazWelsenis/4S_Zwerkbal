@@ -97,7 +97,7 @@ label{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    /* grid-auto-flow: dense; */
+    grid-auto-flow: dense;
 }
 
 .span-2-x{
