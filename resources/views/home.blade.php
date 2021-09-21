@@ -17,14 +17,14 @@
     <div class="index-grid">
         <div class="span-2-x yellow-border font-size-index text-center">
             <p>Aantal aankomende toernooien:</p>
-            <h3>5</h3>
+            <span class="font-bold">5</span>
         </div>
         <div class="snitch-img span-2-xy yellow-border">
             <img src="img/snitch.png" alt="snitch img">
         </div>
         <div class="span-2-x yellow-border font-size-index text-center">
             <p>Totaal aantal teams:</p>
-            <h3>26</h3>
+            <span class="font-bold">26</span>
         </div>
     </div>
 

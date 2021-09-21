@@ -100,8 +100,16 @@ label{
     grid-auto-flow: dense;
 }
 
+.index-grid p{
+    margin-bottom: 0;
+}
+
 .text-center{
     text-align: center;
+}
+
+.font-bold{
+    font-weight: bold;
 }
 
 .span-2-x{
