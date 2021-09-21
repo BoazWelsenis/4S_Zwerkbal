@@ -100,6 +100,10 @@ label{
     grid-auto-flow: dense;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .span-2-x{
     grid-column: span 2;
 }
