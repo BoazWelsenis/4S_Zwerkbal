@@ -4,8 +4,8 @@
 @section('nav')
     <nav>
         <a href="/">Home</a>
-        <a href="/tournaments" class="active">Toernooien</a>
-        <a href="/teams">Teams</a>
+        <a href="/tournaments">Toernooien</a>
+        <a href="/teams" class="active">Teams</a>
         <a href="/players">Spelers</a>
     </nav>
 @endsection
@@ -13,7 +13,7 @@
 @section('content')
 
     <h1>Teams</h1>
-    <a href="">+ nieuw team</a>
+    <a href="{{ route('teams.create') }}">+ nieuw team</a>
 
     <table class="table">
         <tr>

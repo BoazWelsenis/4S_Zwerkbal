@@ -18,6 +18,14 @@
 			<label for="name">Naam toernooi</label>
 			<input type="text" id="name" name="name" class="form-control" value="{{ $tournament->name }}">
 		</div>
+        <div class="form-group">
+			<label for="date">Date</label>
+			<input type="date" id="date" name="date" class="form-control" value="{{ $tournament->date }}">
+		</div>
+		<div class="form-group">
+			<label for="start_time">Time</label>
+			<input type="time" id="time" name="start_time" class="form-control" value="{{ $tournament->start_time }}">
+		</div>
 		<button type="submit">Opslaan</button>
 	</form>
 @endsection
