@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TournamentController;
 use App\Http\Controllers\TeamController;
 
+//Import UpcomingTournamentController
+use App\Http\Controllers\UpcomingTournamentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +31,5 @@ Route::put('/tournaments/{tournament}', [TournamentController::class, 'update'])
 Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');
 Route::get('/teams/create', [TeamController::class, 'create'])->name('teams.create');
 Route::post('/teams', [TeamController::class, 'store'])->name('teams.store');
+
+Route::get('/upcoming', [UpcomingTournamentController::class, 'show'])->name('upcoming.index');
