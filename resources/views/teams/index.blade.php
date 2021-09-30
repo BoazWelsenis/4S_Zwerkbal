@@ -24,9 +24,9 @@
         </tr>
         @foreach($teams as $team)
             <tr>
-                <td>{{ $team->name }}</td>
-                <td>{{ $team->type }}</td>
-                <td>{{ $team->origin }}</td>
+                <td>{{ ucfirst($team->name) }}</td>
+                <td>{{ ucfirst($team->type) }}</td>
+                <td>{{ ucfirst($team->origin) }}</td>
                 <td><a href="">Aanpassen</a></td>
             </tr>
         @endforeach

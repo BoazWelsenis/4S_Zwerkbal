@@ -22,7 +22,7 @@
         </tr>
         @foreach($tournaments as $tournament)
             <tr>
-                <td>{{ $tournament->name }}</td>
+                <td>{{ ucfirst($tournament->name) }}</td>
                 <!-- <td>{{ $tournament->date }}</td> -->
                 <td>{{ date('d-m-Y', strtotime($tournament->date)) }}</td> <!-- Goede volgorde datum: https://stackoverflow.com/questions/50190058/change-date-format-in-blade-template  -->
                 <td>{{ $tournament->start_time }}</td>
