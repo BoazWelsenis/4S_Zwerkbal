@@ -5,6 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Tournament;
 
+// Team Model gebruiken wanneer testdata van Teams geëxporteerd moet worden
+// use App\Models\Team;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -57,30 +60,30 @@ class DatabaseSeeder extends Seeder
 
         // TESTDATA VOOR TEAM TABEL
         //Team 1
-        $team = new Team();
-        $team->name = "Zwadderich";
-        $team->type = "School";
-        $team->origin = "Zweinstein";
-        $team->save();
+        // $team = new Team();
+        // $team->name = "Zwadderich";
+        // $team->type = "School";
+        // $team->origin = "Zweinstein";
+        // $team->save();
 
         //Team 2
-        $team = new Team();
-        $team->name = "Nationaal Belgisch Zwerkbalteam";
-        $team->type = "Country";
-        $team->origin = "België";
-        $team->save();
+        // $team = new Team();
+        // $team->name = "Nationaal Belgisch Zwerkbalteam";
+        // $team->type = "Country";
+        // $team->origin = "België";
+        // $team->save();
 
         //Team 3
-        $team = new Team();
-        $team->name = "Griffoendor";
-        $team->type = "School";
-        $team->origin = "Zweinstein";
-        $team->save();
+        // $team = new Team();
+        // $team->name = "Griffoendor";
+        // $team->type = "School";
+        // $team->origin = "Zweinstein";
+        // $team->save();
 
         //Team 4
-        $team = new Team();
-        $team->name = "Zwerkbal Zwabbers";
-        $team->type = "Commercial";
-        $team->save();
+        // $team = new Team();
+        // $team->name = "Zwerkbal Zwabbers";
+        // $team->type = "Commercial";
+        // $team->save();
     }
 }
