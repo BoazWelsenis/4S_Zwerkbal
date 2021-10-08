@@ -8,6 +8,9 @@ use App\Http\Controllers\TeamController;
 //Import UpcomingTournamentController
 use App\Http\Controllers\UpcomingTournamentController;
 
+//Import PlayerController
+use App\Http\Controllers\PlayerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +36,5 @@ Route::get('/teams/create', [TeamController::class, 'create'])->name('teams.crea
 Route::post('/teams', [TeamController::class, 'store'])->name('teams.store');
 
 Route::get('/upcoming', [UpcomingTournamentController::class, 'show'])->name('upcoming.index');
+
+Route::get('/players', [PlayerController::class, 'index']);

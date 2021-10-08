@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Tournament;
 
 // Team Model gebruiken wanneer testdata van Teams geëxporteerd moet worden
-// use App\Models\Team;
+use App\Models\Team;
 
 class DatabaseSeeder extends Seeder
 {
@@ -60,30 +60,62 @@ class DatabaseSeeder extends Seeder
 
         // TESTDATA VOOR TEAM TABEL
         //Team 1
-        // $team = new Team();
-        // $team->name = "Zwadderich";
-        // $team->type = "School";
-        // $team->origin = "Zweinstein";
-        // $team->save();
+        $team = new Team();
+        $team->name = "Zwadderich";
+        $team->type = "School";
+        $team->origin = "Zweinstein";
+        $team->save();
 
         //Team 2
-        // $team = new Team();
-        // $team->name = "Nationaal Belgisch Zwerkbalteam";
-        // $team->type = "Country";
-        // $team->origin = "België";
-        // $team->save();
+        $team = new Team();
+        $team->name = "Nationaal Belgisch Zwerkbalteam";
+        $team->type = "Country";
+        $team->origin = "België";
+        $team->save();
 
         //Team 3
-        // $team = new Team();
-        // $team->name = "Griffoendor";
-        // $team->type = "School";
-        // $team->origin = "Zweinstein";
-        // $team->save();
+        $team = new Team();
+        $team->name = "Griffoendor";
+        $team->type = "School";
+        $team->origin = "Zweinstein";
+        $team->save();
 
         //Team 4
-        // $team = new Team();
-        // $team->name = "Zwerkbal Zwabbers";
-        // $team->type = "Commercial";
-        // $team->save();
+        $team = new Team();
+        $team->name = "Zwerkbal Zwabbers";
+        $team->type = "Commercial";
+        $team->save();
+
+        // (EXTRA) TEAMS
+        //
+        $team->name = "German National Quidditch team";
+        $team->type = "country";
+        $team->origin = "Duitsland";
+        $team->save();
+
+        $team->name = "Hufflepuff";
+        $team->type = "school";
+        $team->origin = "Zweinstein";
+        $team->save();
+
+        $team->name = "4S Quidditch Team";
+        $team->type = "commercial";
+        $team->save();
+
+        //
+        // SPELERS
+        //
+        $characters = ["Ludo Bagman", "Argus Filch", "Marvolo Gaunt", "Rubeus Hagrid", "Lee Jordan", "Viktor Krum", "Draco Malfoy", "Padma Patil", "Newt Scamander", "Fred Weasley", "Oliver Wood", "Horace Slughorn", "Alicia Spinnet", "Garrick Ollivander", "Luna Lovegood", "Neville Longbottom", "Gregory Goyle", "Colin Creevey", "Susan Bones", "Hannah Abbott"];
+        $types = ["chaser", "beater", "keeper", "seeker"];
+        $teams = \App\Models\Team::all();
+
+        foreach($characters as $character)
+        {
+            $player = new \App\Models\Player();
+            $player->team_id = $teams->random()->id;
+            $player->name = $character;
+            $player->type = $types[array_rand($types)];
+            $player->save();
+        }
     }
 }
