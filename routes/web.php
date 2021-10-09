@@ -37,4 +37,4 @@ Route::post('/teams', [TeamController::class, 'store'])->name('teams.store');
 
 Route::get('/upcoming', [UpcomingTournamentController::class, 'show'])->name('upcoming.index');
 
-Route::get('/players', [PlayerController::class, 'index']);
+Route::get('/players', [PlayerController::class, 'index'])->name('players.index');

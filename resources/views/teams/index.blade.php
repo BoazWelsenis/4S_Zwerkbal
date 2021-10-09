@@ -23,6 +23,7 @@
             <th>Spelers</th>
             <th>&nbsp;</th>
         </tr>
+
         @foreach($teams as $team)
             <tr>
                 <td>{{ ucfirst($team->name) }}</td>
@@ -30,10 +31,10 @@
                 <td>{{ ucfirst($team->origin) }}</td>
                 
                 <td>
-                @foreach($team->players as $team->player)
-                    {{ $team->player->name }} ({{ $team->player->type }}) 
-                    <br>
-                @endforeach
+                    @foreach($team->players as $team->player)
+                        {{ $team->player->name }} ({{ $team->player->type }}) 
+                        <br>
+                    @endforeach
                 </td>
 
                 <td><a href="">Aanpassen</a></td>
