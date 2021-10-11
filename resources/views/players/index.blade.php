@@ -12,6 +12,7 @@
 @section('content')
 
     <h1>Spelers</h1>
+    <a href="{{ route('players.create') }}">+ nieuwe speler</a>
 
     <table class="table">
         <tr>

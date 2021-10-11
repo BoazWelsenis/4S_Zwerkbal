@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Player;
 use Illuminate\Http\Request;
 
+//Importeer Teams, voor de create / store methode (door relatie in database)
+use App\Models\Team;
+
 class PlayerController extends Controller
 {
     /**
@@ -28,6 +31,9 @@ class PlayerController extends Controller
     public function create()
     {
         //
+        $teams = Team::all();
+        return view('players/create')
+            ->with('teams', $teams);
     }
 
     /**

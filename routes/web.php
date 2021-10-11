@@ -9,7 +9,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UpcomingTournamentController;
 
 //Import PlayerController
-use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\PlayerController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +38,5 @@ Route::post('/teams', [TeamController::class, 'store'])->name('teams.store');
 Route::get('/upcoming', [UpcomingTournamentController::class, 'show'])->name('upcoming.index');
 
 Route::get('/players', [PlayerController::class, 'index'])->name('players.index');
+Route::get('/players/create', [PlayerController::class, 'create'])->name('players.create');
+Route::post('/players', [PlayerController::class, 'store'])->name('players.store');
