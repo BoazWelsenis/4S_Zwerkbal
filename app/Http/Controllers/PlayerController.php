@@ -45,6 +45,13 @@ class PlayerController extends Controller
     public function store(Request $request)
     {
         //
+        $player = new Player();
+        $player->name = $request->name;
+        $player->type = $request->type;
+        $player->team_id = $request->team; //team haal je op uit de name van de select (de variabele voor de dropdown die een POST methode heeft)
+        $player->save();
+        
+        return redirect()->route('players.index');
     }
 
     /**

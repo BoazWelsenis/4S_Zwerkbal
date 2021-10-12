@@ -21,7 +21,6 @@
             <th>Soort</th>
             <th>Herkomst</th>
             <th>Spelers</th>
-            <th>&nbsp;</th>
         </tr>
 
         @foreach($teams as $team)
@@ -36,8 +35,6 @@
                         <br>
                     @endforeach
                 </td>
-
-                <td><a href="">Aanpassen</a></td>
             </tr>
         @endforeach
     </table>
