@@ -73,7 +73,13 @@ class PlayerController extends Controller
      */
     public function edit(Player $player)
     {
-        //
+        $teams = Team::all();
+        $current_team = Team::all()->where('id', '=', $player['team_id']); //https://laracasts.com/discuss/channels/eloquent/how-to-fetch-all-id-related-to-another-table
+        return view('players/edit')
+            ->with('teams', $teams)
+            ->with('current_team', $current_team)
+            ->with('player', $player);
+
     }
 
     /**
@@ -86,6 +92,12 @@ class PlayerController extends Controller
     public function update(Request $request, Player $player)
     {
         //
+        $player->name = $request->name;
+        $player->type = $request->type;
+        $player->team_id = $request->team; 
+        $player->save();
+        
+        return redirect()->route('players.index');
     }
 
     /**
