@@ -17,14 +17,20 @@
     <div class="index-grid">
         <div class="span-2-x yellow-border font-size-index text-center">
             <p>Aantal aankomende toernooien:</p>
-            <span class="font-bold">5</span>
+            <span class="font-bold">{{ $amount_upcoming_tournaments }}</span> <!-- Aggregates (Laravel): https://laravel.com/docs/8.x/queries#aggregates -->
+
+            <!-- HARDCODED: -->
+            <!-- <span class="font-bold">5</span> -->
         </div>
         <div class="snitch-img span-2-xy yellow-border">
             <img src="img/snitch.png" alt="snitch img">
         </div>
         <div class="span-2-x yellow-border font-size-index text-center">
             <p>Totaal aantal teams:</p>
-            <span class="font-bold">26</span>
+            <span class="font-bold">{{ $amount_teams }}</span>
+
+            <!-- HARDCODED: -->
+            <!-- <span class="font-bold">26</span> -->
         </div>
     </div>
 
