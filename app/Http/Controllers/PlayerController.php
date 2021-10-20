@@ -100,6 +100,15 @@ class PlayerController extends Controller
         return redirect()->route('players.index');
     }
 
+    public function search(Request $request)
+    {
+        $player_search = $request->input('player_search'); //Laravel - Get Input Data Value in Controller: https://stackoverflow.com/questions/54285283/get-input-data-value-in-controller-in-laravel
+        $player_result = Player::where('name', 'like', '%' .$player_search. '%')->get();
+
+        return view('players.index')
+            ->with('player_result', $player_result);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

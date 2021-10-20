@@ -42,3 +42,4 @@ Route::get('/players/create', [PlayerController::class, 'create'])->name('player
 Route::post('/players', [PlayerController::class, 'store'])->name('players.store');
 Route::get('/players/{player}/edit', [PlayerController::class, 'edit'])->name('players.edit');
 Route::put('/players/{player}', [PlayerController::class, 'update'])->name('players.update');
+Route::get('/players/search', [PlayerController::class, 'search'])->name('players.search');
